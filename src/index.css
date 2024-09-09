@@ -1,0 +1,134 @@
+.app-container {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.calendar-day {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.calendar-day:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.calendar-day.selected {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.calendar-day:active {
+  transform: scale(0.9);
+}
+
+/* تنسيق لعدد المهام */
+.task-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.task-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-list li .task-number {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.task-list li button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-list li button:hover {
+  background-color: #c82333;
+}
+.task-list li span {
+  cursor: pointer; 
+}
